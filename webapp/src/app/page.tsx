@@ -12,7 +12,7 @@ import QuestionScreen from '@/components/QuestionScreen';
 import CooldownScreen from '@/components/CooldownScreen';
 import ResultScreen from '@/components/ResultScreen';
 
-const CHANNEL_URL = process.env.NEXT_PUBLIC_CHANNEL_URL || 'https://t.me/stalkermedia';
+const CHANNEL_URL = process.env.NEXT_PUBLIC_CHANNEL_URL || 'https://t.me/stalker_media_minsk';
 
 export default function Home() {
   const [screen, setScreen] = useState<Screen>('loading');
