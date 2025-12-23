@@ -136,7 +136,7 @@ export default function ResultScreen({
             {/* CTA */}
             <div className="mt-6 space-y-3 safe-area-bottom">
                 <a
-                    href="https://t.me/stalkermedia"
+                    href="https://t.me/stalker_media_minsk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary w-full text-center block"
