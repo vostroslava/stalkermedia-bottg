@@ -1,6 +1,6 @@
 // API client for Google Apps Script backend
 
-const GAS_URL = process.env.NEXT_PUBLIC_GAS_URL || '';
+const GAS_URL = process.env.NEXT_PUBLIC_GAS_URL || 'https://script.google.com/macros/s/AKfycby2Jh4_wxI2a5Cqp5B4caa6ZsQBWnoMPWpZNhdRT_0JS8dPLgcQsN6Zmz8HAHg16XEX/exec';
 
 interface ApiResponse<T = unknown> {
     success: boolean;
