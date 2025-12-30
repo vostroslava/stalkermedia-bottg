@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: stalker-tg-miniapp
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        value: "@stalker_media_minsk"
+      - key: APPS_SCRIPT_URL
+        sync: false
+      - key: APP_URL
+        sync: false
