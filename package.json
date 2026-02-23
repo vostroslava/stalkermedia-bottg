@@ -1,0 +1,33 @@
+{
+  "name": "stalker-tg-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:webapp\" \"npm run dev:bot\"",
+    "dev:server": "npm run dev -w apps/server",
+    "dev:webapp": "npm run dev -w apps/webapp",
+    "dev:bot": "npm run dev -w apps/bot",
+    "build": "npm run build -w packages/shared && npm run build -w apps/webapp && npm run build -w apps/server && npm run build -w apps/bot",
+    "start": "npm run start -w apps/server",
+    "start:bot": "npm run start -w apps/bot",
+    "test": "npm run test -w packages/shared && npm run test -w apps/server",
+    "test:unit": "npm run test -w packages/shared",
+    "test:api": "npm run test -w apps/server",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
