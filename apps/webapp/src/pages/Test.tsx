@@ -54,7 +54,7 @@ function Test({ matrix, onComplete, onBack }: TestProps) {
     };
 
     return (
-        <>
+        <div className="test-container">
             <div className="progress">
                 <div className="progress__bar">
                     <div
@@ -102,7 +102,7 @@ function Test({ matrix, onComplete, onBack }: TestProps) {
                     </button>
                 )}
             </div>
-        </>
+        </div>
     );
 }
 
